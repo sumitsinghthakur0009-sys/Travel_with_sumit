@@ -15,6 +15,16 @@ This repository contains the frontend prototype. It is built with plain HTML, CS
 - Save generated sample plans locally on the current device
 - Creator story credits Sumit Dangi as founder and creator
 
+## Version 6 additions — Paris in 3D
+
+- New `paris.html`, `paris.css` and `paris.js`: an interactive 3D Paris built with Three.js (loaded from cdnjs)
+- Drag to orbit, pinch or scroll to zoom, tap a landmark chip to fly to the Eiffel Tower, Arc de Triomphe, Louvre pyramid or Notre-Dame
+- Day and night modes, with lit windows, a sparkling tower and a rotating beacon at night
+- A 4K photo gallery: thumbnails load small sizes, tapping a photo opens it at 3840 px wide
+- Opening Paris in the app now shows **Enter Paris in 3D**
+- The 3D city is a stylised model, not to scale and not a map
+- Photos come from Unsplash and are credited to their photographers; check the current Unsplash License before publishing or monetising
+
 ## Features
 
 - Responsive design for Android phones, tablets and desktop
@@ -63,6 +73,9 @@ globego-virtual-travel/
 ├── app.js
 ├── manifest.json
 ├── sw.js
+├── paris.html
+├── paris.css
+├── paris.js
 ├── assets/
 │   └── icon.svg
 ├── README.md
