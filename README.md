@@ -1,4 +1,4 @@
-# GlobeGo — Version 2 🌍
+# GlobeGo — Version 5 🌍
 
 **The world is closer than you think.**
 
@@ -7,6 +7,13 @@ GlobeGo is a mobile-friendly virtual travel discovery prototype with a luxury tr
 ## Preview
 
 This repository contains the frontend prototype. It is built with plain HTML, CSS and JavaScript, so there is no build step or package installation required.
+
+## Version 5 additions
+
+- Sample day-by-day itinerary builder for all eight featured destinations
+- Choose trip length and travel mood
+- Save generated sample plans locally on the current device
+- Creator story credits Sumit Dangi as founder and creator
 
 ## Features
 
@@ -62,6 +69,10 @@ globego-virtual-travel/
 ├── LICENSE
 └── .gitignore
 ```
+
+## Planner notes
+
+The itinerary builder creates sample inspiration only. It does not verify opening hours, route distances, current safety conditions, transport, prices or availability. Saved plans stay in the current browser's local storage and are not synced.
 
 ## Important limitations
 

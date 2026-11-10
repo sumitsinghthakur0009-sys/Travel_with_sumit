@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f5f1e8">
   <meta name="description" content="GlobeGo, created by Sumit Dangi to help people explore and appreciate our wonderful world.">
-  <title>GlobeGo — Explore the world | Version 2</title>
+  <title>GlobeGo — Explore the world | Version 5</title>
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
@@ -49,6 +49,35 @@
 
           <div class="section-heading"><div><p class="eyebrow">CURATED FOR THE CURIOUS</p><h2>Editor's picks</h2></div><span class="small-note">HANDPICKED PLACES</span></div>
           <div class="destination-grid" id="featuredGrid"></div>
+
+
+        <section class="planner-section" id="trip-planner">
+          <div class="planner-heading">
+            <div><p class="eyebrow">YOUR JOURNEY, YOUR WAY</p><h2>Build a little itinerary.</h2>
+            <p class="planner-intro">Create a simple day-by-day idea for a destination you would love to explore.</p></div>
+            <span class="planner-stamp">G<br><small>TRAVEL<br>NOTES</small></span>
+          </div>
+          <div class="planner-panel">
+            <label for="plannerDestination">Choose a destination</label>
+            <select id="plannerDestination">
+              <option value="amalfi">Amalfi Coast, Italy</option><option value="kyoto">Kyoto, Japan</option>
+              <option value="maldives">The Maldives</option><option value="taj">Taj Mahal, India</option>
+              <option value="banff">Banff National Park, Canada</option><option value="paris">Paris, France</option>
+              <option value="petra">Petra, Jordan</option><option value="santorini">Santorini, Greece</option>
+            </select>
+            <div class="planner-fields">
+              <div><label for="plannerDays">Trip length</label><select id="plannerDays"><option value="1">1 day</option><option value="2">2 days</option><option value="3" selected>3 days</option><option value="4">4 days</option><option value="5">5 days</option></select></div>
+              <div><label for="plannerMood">Travel mood</label><select id="plannerMood"><option value="balanced">A little of everything</option><option value="culture">Culture & history</option><option value="nature">Nature & slow moments</option><option value="food">Food & local life</option></select></div>
+            </div>
+            <button class="dark-cta planner-generate" id="generatePlan">Create my sample itinerary <span>↗</span></button>
+            <p class="planner-disclaimer">A creative starting point, not live booking or verified local guidance. Check current opening times, local advice and travel requirements before a real trip.</p>
+          </div>
+          <div class="itinerary-result" id="itineraryResult" aria-live="polite" hidden>
+            <div class="itinerary-top"><div><p class="eyebrow">YOUR GLOBEGO TRAVEL NOTES</p><h3 id="itineraryTitle">A journey to remember</h3></div><button class="outline-cta" id="savePlan">Save this plan</button></div>
+            <div id="itineraryDays" class="itinerary-days"></div>
+            <p class="saved-plan-status" id="savedPlanStatus"></p>
+          </div>
+        </section>
 
           <section class="film-banner">
             <div>
@@ -147,7 +176,7 @@
           <h3>Made to bring the world a little closer.</h3>
           <p>My name is <strong>Sumit Dangi</strong>, the owner and creator of GlobeGo. I built this project with a simple dream: to help people discover, explore and appreciate the beauty, culture and stories of our world — wherever they are.</p>
           <p>GlobeGo is for curious minds, dreamers and explorers. I hope every visit inspires you to learn about a new place and see the world with fresh eyes.</p>
-          <div class="creator-signoff"><span>With curiosity,</span><strong>Sumit Dangi</strong><small>FOUNDER & CREATOR OF GLOBEGO · VERSION 2.0</small></div>
+          <div class="creator-signoff"><span>With curiosity,</span><strong>Sumit Dangi</strong><small>FOUNDER & CREATOR OF GLOBEGO · VERSION 5.0</small></div>
         </div>
       </div>
       <div class="creator-bottom"><span>GLOBEGO · THE WORLD, WITHIN REACH</span><span>INDEPENDENT CREATIVE PROJECT</span></div>

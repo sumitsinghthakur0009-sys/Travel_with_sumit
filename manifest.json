@@ -1,0 +1,17 @@
+{
+  "name": "GlobeGo \u2014 Virtual Travel Explorer",
+  "short_name": "GlobeGo",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f1e8",
+  "theme_color": "#f5f1e8",
+  "description": "Discover remarkable places around the world from your phone.",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
