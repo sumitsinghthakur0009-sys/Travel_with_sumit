@@ -1,55 +1,101 @@
-# GlobeGo — Android-friendly prototype
+# GlobeGo — Version 2 🌍
 
-A responsive, installable web-app prototype for virtual travel discovery.
+**The world is closer than you think.**
 
-## Included in this ZIP
-- Luxury travel-magazine visual style
-- Five working sections: Discover, Explore, Atlas, Films and Saved
+GlobeGo is a mobile-friendly virtual travel discovery prototype with a luxury travel-magazine visual style. Explore destinations, browse a clickable illustrated atlas, discover travel films, and save places to a personal collection.
+
+## Preview
+
+This repository contains the frontend prototype. It is built with plain HTML, CSS and JavaScript, so there is no build step or package installation required.
+
+## Features
+
+- Responsive design for Android phones, tablets and desktop
+- Discover homepage with editorial destination cards
 - Eight sample destinations: Amalfi Coast, Kyoto, Maldives, Taj Mahal, Banff, Paris, Petra and Santorini
 - Search and category filters
 - Clickable illustrated atlas pins
-- Destination detail sheets with facts
-- Save/bookmark places (stored locally on the device)
-- Drag-to-look panorama *simulation*
-- Travel-film search links
-- PWA manifest and service worker for install/offline app shell
+- Destination detail modal with travel facts
+- Save/bookmark destinations using browser local storage
+- Travel film discovery links
+- Drag-to-look panorama interaction (visual simulation)
+- PWA manifest and service worker for an installable app shell
 
-## Important prototype limitations
-- No user accounts, cloud sync, payments or real ad network are connected.
-- The atlas is an illustrative clickable map, not GPS navigation.
-- The panorama interaction is a visual demo, not a true 360° tour.
-- Images are loaded from Unsplash image URLs and need internet access. Check the current licence/terms and use assets you have permission to publish before launch.
-- Film cards open YouTube search results; GlobeGo does not host those videos.
-- Offline support caches the app shell; external photos may not be available offline.
+## Run locally
 
-## Run on Android
-### Easiest: SPCK Editor
-1. Extract the ZIP.
-2. In SPCK, create/open a project and import the extracted folder (or copy `index.html`, `styles.css`, `app.js`, `manifest.json`, `sw.js`, and `assets/`).
-3. Open `index.html` in the preview.
-4. Keep internet on for the sample photography.
+### Option 1: SPCK Editor on Android
 
-### Run through a local server
-If you have a terminal:
+1. Download this repository as a ZIP or clone it.
+2. Extract the project.
+3. Open/import the project folder in SPCK Editor.
+4. Open `index.html` in the preview.
+5. Keep an internet connection active for remote sample photographs.
+
+### Option 2: Local web server
+
+From the project directory, run:
+
 ```bash
 python -m http.server 8000
 ```
-Open `http://localhost:8000` in a browser on the same device.
 
-Service workers and PWA install generally require HTTPS or localhost. A direct `file://` preview may not support install/offline features.
+Then open `http://localhost:8000` in your browser.
 
-## Install as an app
-After publishing the project to an HTTPS host (for example, a static hosting provider), open the site in Chrome on Android → browser menu → **Install app** or **Add to Home screen** (wording varies).
+> Service workers and PWA installation generally require HTTPS or localhost. Opening the HTML file directly with `file://` may not enable those features.
 
-## Suggested next build stages
-1. Replace sample images with a curated, documented set of licensed destination photographs.
-2. Add a real 360° viewer using a maintained panorama library and licensed equirectangular images.
-3. Build a small backend for destination metadata, editorial collections and optional user accounts.
-4. Add map tiles through a provider whose terms allow your usage; show attribution and respect rate limits.
-5. Add privacy-friendly analytics only after writing a clear privacy notice and collecting only necessary data.
-6. Add optional premium features such as offline tour packs, curated audio guides or ad-free browsing.
-7. Add age-appropriate, contextual advertising only after checking the ad provider's eligibility, consent and child/teen policies. Do not profile minors or collect precise location for ad targeting.
-8. Test performance, accessibility, image rights, privacy and security before public release.
+## Install on Android
 
-## Monetisation reality
-A free app with optional premium features can earn, but revenue is not automatic. Ads require eligible traffic, policy compliance and advertiser demand. Premium conversion also depends on clear extra value. Keep the basic exploration experience useful for free.
+After deploying the project to an HTTPS host, open the website in Chrome on Android. Use the browser menu and choose **Install app** or **Add to Home screen** (the wording can vary).
+
+## Project structure
+
+```text
+globego-virtual-travel/
+├── index.html
+├── styles.css
+├── app.js
+├── manifest.json
+├── sw.js
+├── assets/
+│   └── icon.svg
+├── README.md
+├── LICENSE
+└── .gitignore
+```
+
+## Important limitations
+
+This is an early frontend prototype, not a production travel platform.
+
+- The atlas is an illustrative map, not a live map or navigation service.
+- The panorama is a simulated horizontal image interaction, not a true 360° tour.
+- There is no backend, login, cloud sync, payment system or ad network.
+- Destination photos load from remote Unsplash image URLs and need an internet connection.
+- Film links open YouTube search results; GlobeGo does not host those videos.
+- Offline caching covers the app shell; remote images may not be available offline.
+
+## Roadmap
+
+1. Replace demo imagery with a curated library of assets whose licences permit the intended use.
+2. Integrate a maintained 360° panorama viewer and licensed equirectangular imagery.
+3. Add real map data from a provider whose usage terms, attribution and rate limits are followed.
+4. Build a backend for destination content and optional accounts.
+5. Add accessibility, performance, security and privacy testing.
+6. Consider optional premium features such as downloadable tour packs or audio guides.
+7. Consider age-appropriate, contextual advertising only after checking provider eligibility, consent requirements and policies. Do not profile minors or collect precise location for ad targeting.
+
+## Monetisation
+
+The intended model is free core exploration with optional premium features. Advertising revenue is not guaranteed and depends on eligible traffic, advertiser demand and policy compliance. Premium features should add genuine value without making basic exploration unusable.
+
+## Image, video and font rights
+
+The source code licence does not grant rights to third-party media. Before publishing or monetising, verify the current licence and terms for every photograph, video, font and other asset. Replace any asset you cannot legally use.
+
+## Contributing
+
+Issues and pull requests are welcome. For substantial changes, open an issue first to discuss what you would like to improve.
+
+## Licence
+
+The project source code is released under the MIT License. Third-party media and trademarks remain subject to their respective owners' terms.
