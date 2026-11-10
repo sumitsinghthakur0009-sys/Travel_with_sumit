@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" content="GlobeGo — discover the world from wherever you are.">
+  <title>GlobeGo — The world, within reach</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" data-page="discover" aria-label="GlobeGo home">
+        <span class="brand-mark">G</span><span>globe<span class="brand-light">go</span></span>
+      </a>
+      <div class="top-actions">
+        <button class="icon-button" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button>
+        <button class="avatar" id="profileButton" aria-label="Profile">G</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page active" id="page-discover">
+        <div class="hero">
+          <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1800&q=85" alt="Colourful coastal village in Italy">
+          <div class="hero-shade"></div>
+          <div class="hero-copy">
+            <p class="eyebrow light">A WORLD OF WONDER, FROM HERE</p>
+            <h1>The world is<br><em>within reach.</em></h1>
+            <p>Wander through remarkable places, one virtual journey at a time.</p>
+            <button class="light-cta" data-open="amalfi">Explore the story <span>↗</span></button>
+          </div>
+          <div class="hero-note"><span>01 / 08</span><span>THE AMALFI COAST · ITALY</span></div>
+        </div>
+
+        <div class="content-wrap">
+          <div class="welcome-row">
+            <div><p class="eyebrow">YOUR PASSPORT TO ELSEWHERE</p><h2>Where to today?</h2></div>
+            <button class="text-link" data-page="explore">View all places ↗</button>
+          </div>
+          <div class="search-panel" id="searchPanel">
+            <span class="search-symbol">⌕</span>
+            <input id="searchInput" type="search" placeholder="Search cities, countries, wonders…" aria-label="Search destinations">
+            <button id="clearSearch" aria-label="Clear search">×</button>
+          </div>
+
+          <div class="section-heading"><div><p class="eyebrow">CURATED FOR THE CURIOUS</p><h2>Editor's picks</h2></div><span class="small-note">HANDPICKED PLACES</span></div>
+          <div class="destination-grid" id="featuredGrid"></div>
+
+          <section class="film-banner">
+            <div>
+              <p class="eyebrow light">THE WORLD IN MOTION</p>
+              <h2>Postcards<br><em>that move.</em></h2>
+              <p>Discover destination films and visual stories.</p>
+              <button class="light-cta" data-page="films">Explore travel films ↗</button>
+            </div>
+            <div class="film-stamp">GG<br><small>TRAVEL<br>JOURNAL</small></div>
+          </section>
+
+          <div class="section-heading"><div><p class="eyebrow">GO A LITTLE FURTHER</p><h2>Choose your mood</h2></div></div>
+          <div class="mood-row">
+            <button class="mood-chip" data-filter="Nature">✳ Nature</button>
+            <button class="mood-chip" data-filter="Culture">⌂ Culture</button>
+            <button class="mood-chip" data-filter="Coast">≈ Coast</button>
+            <button class="mood-chip" data-filter="City">▦ City life</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-explore">
+        <div class="page-intro"><p class="eyebrow">THE GLOBE IS YOURS</p><h1>Find your<br><em>somewhere.</em></h1><p>Browse a growing collection of places worth discovering.</p></div>
+        <div class="content-wrap">
+          <div class="filter-row" id="filterRow">
+            <button class="filter-chip selected" data-filter="All">All places</button>
+            <button class="filter-chip" data-filter="Nature">Nature</button>
+            <button class="filter-chip" data-filter="Culture">Culture</button>
+            <button class="filter-chip" data-filter="Coast">Coast</button>
+            <button class="filter-chip" data-filter="City">City</button>
+          </div>
+          <div class="destination-grid" id="allGrid"></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-map">
+        <div class="page-intro"><p class="eyebrow">A DIFFERENT KIND OF ATLAS</p><h1>Look around.<br><em>Go anywhere.</em></h1><p>Choose a pin to open a destination. This is a sample explorer, not a live navigation map.</p></div>
+        <div class="content-wrap">
+          <div class="map-card">
+            <div class="map-art">
+              <svg viewBox="0 0 720 390" role="img" aria-label="Illustrated world map with clickable destination markers">
+                <defs><pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#c6c0b1"/></pattern></defs>
+                <rect width="720" height="390" fill="#e9e6dc"/>
+                <g fill="url(#dots)" stroke="#d0cbbb" stroke-width="1.5">
+                  <path d="M55 94 100 55 173 49 218 78 210 124 179 147 163 193 118 184 94 143 57 135Z"/>
+                  <path d="M173 198 208 208 231 256 214 319 184 345 163 288 151 238Z"/>
+                  <path d="M305 78 344 54 396 65 414 93 389 119 348 116 328 143 301 119Z"/>
+                  <path d="M335 145 385 131 427 163 419 235 389 289 356 257 332 201Z"/>
+                  <path d="M413 77 479 52 563 70 638 112 626 157 566 164 537 197 483 177 451 139 412 125Z"/>
+                  <path d="M550 237 604 225 649 252 632 302 579 312 548 279Z"/>
+                </g>
+                <g class="map-pins">
+                  <g data-map="amalfi" role="button" tabindex="0" aria-label="Open Amalfi Coast"><circle cx="370" cy="105" r="9"/><text x="383" y="101">Amalfi</text></g>
+                  <g data-map="kyoto" role="button" tabindex="0" aria-label="Open Kyoto"><circle cx="585" cy="145" r="9"/><text x="598" y="141">Kyoto</text></g>
+                  <g data-map="maldives" role="button" tabindex="0" aria-label="Open Maldives"><circle cx="442" cy="235" r="9"/><text x="455" y="231">Maldives</text></g>
+                  <g data-map="taj" role="button" tabindex="0" aria-label="Open Taj Mahal"><circle cx="487" cy="157" r="9"/><text x="500" y="153">Agra</text></g>
+                  <g data-map="banff" role="button" tabindex="0" aria-label="Open Banff"><circle cx="155" cy="106" r="9"/><text x="168" y="102">Banff</text></g>
+                  <g data-map="paris" role="button" tabindex="0" aria-label="Open Paris"><circle cx="360" cy="94" r="9"/><text x="373" y="90">Paris</text></g>
+                </g>
+              </svg>
+              <div class="map-caption">ILLUSTRATIVE WORLD ATLAS · SELECT A PIN</div>
+            </div>
+          </div>
+          <div class="section-heading"><div><p class="eyebrow">START EXPLORING</p><h2>Places on the map</h2></div></div>
+          <div class="destination-grid compact-grid" id="mapGrid"></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-films">
+        <div class="page-intro"><p class="eyebrow">SIGHTS, SOUNDS & STORIES</p><h1>See the world<br><em>in motion.</em></h1><p>Travel-film discoveries from around the globe.</p></div>
+        <div class="content-wrap">
+          <div class="film-list" id="filmList"></div>
+          <p class="fine-print">Film links open YouTube search results for the destination. GlobeGo does not host or own those videos. Choose content with appropriate reuse rights before adding it to a published app.</p>
+        </div>
+      </section>
+
+      <section class="page" id="page-saved">
+        <div class="page-intro"><p class="eyebrow">YOUR PERSONAL ATLAS</p><h1>Keep a little<br><em>wonder.</em></h1><p>Save places you'd love to explore again.</p></div>
+        <div class="content-wrap">
+          <div class="saved-summary"><span class="saved-count" id="savedCount">0</span><span>places in your collection</span></div>
+          <div class="destination-grid" id="savedGrid"></div>
+          <div class="empty-state" id="emptySaved"><span>✳</span><h2>Your next journey starts here.</h2><p>Tap the bookmark on any destination to add it to your personal atlas.</p><button class="dark-cta" data-page="explore">Discover places</button></div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="nav-item active" data-page="discover"><span>⌂</span><small>Discover</small></button>
+      <button class="nav-item" data-page="explore"><span>✧</span><small>Explore</small></button>
+      <button class="nav-item" data-page="map"><span>◎</span><small>Atlas</small></button>
+      <button class="nav-item" data-page="films"><span>▷</span><small>Films</small></button>
+      <button class="nav-item" data-page="saved"><span>♡</span><small>Saved</small></button>
+    </nav>
+  </div>
+
+  <div class="modal-backdrop" id="destinationModal" aria-hidden="true">
+    <article class="destination-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div class="modal-image-wrap"><img id="modalImage" src="" alt=""><span class="modal-location" id="modalLocation"></span></div>
+      <div class="modal-body">
+        <p class="eyebrow" id="modalCategory"></p>
+        <h2 id="modalTitle"></h2>
+        <p class="modal-description" id="modalDescription"></p>
+        <div class="fact-row" id="modalFacts"></div>
+        <div class="modal-actions">
+          <button class="dark-cta" id="tourButton">Enter 360° preview ↗</button>
+          <button class="outline-cta" id="saveButton">♡ Save place</button>
+        </div>
+        <p class="fine-print">This prototype uses sample photography. The 360° preview is a simulated panorama interaction, not a connected live tour.</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="modal-backdrop" id="tourModal" aria-hidden="true">
+    <article class="tour-modal" role="dialog" aria-modal="true" aria-labelledby="tourTitle">
+      <button class="modal-close" id="tourClose" aria-label="Close">×</button>
+      <div class="tour-head"><p class="eyebrow light">GLOBEGO PANORAMA PREVIEW</p><h2 id="tourTitle">Look around.</h2><p>Drag the scene sideways to explore this sample panorama.</p></div>
+      <div class="panorama-window" id="panoramaWindow"><img id="panoramaImage" src="" alt="Panoramic destination preview"></div>
+      <div class="panorama-controls"><span>← DRAG TO LOOK AROUND →</span><button id="panReset">Reset view</button></div>
+      <p class="fine-print tour-note">Demo interaction only. A production tour would use licensed 360° equirectangular imagery and a dedicated panorama viewer.</p>
+    </article>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
